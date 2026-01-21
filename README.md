@@ -1,7 +1,7 @@
 <div align="center">
 
 # Ntokozo Maboa  
-### Software Developer • Data Analyst • Systems Graduate  
+### Software Developer • Data Analyst • Systems Development Graduate  
 
 📍 South Africa  
 📧 **ntokozomaboa0209@gmail.com**  
@@ -26,27 +26,27 @@ I’m actively seeking **graduate or entry-level opportunities** where I can gro
 ## 🧠 About Me
 
 I hold a **Diploma in Systems Development from Boston City Campus**.  
-My academic background has equipped me with skills in:
+My academic background has equipped me with strong skills in:
 
 - Software development  
 - Database systems  
 - Systems analysis  
 - Technical documentation  
 
-I enjoy problem-solving, writing clean code, and collaborating with teams to deliver quality solutions.
+I enjoy solving problems, writing clean code, and working with teams to build useful solutions.
 
 ---
 
 ## 🛠️ Skills & Technologies
 
 ### 💻 Programming  
-`Java` • `Python` • `JavaScript` • `SQL`  
+Java • Python • JavaScript • SQL  
 
 ### 🌐 Web  
-`HTML` • `CSS` • `PHP`  
+HTML • CSS • PHP  
 
 ### 🗄️ Databases  
-`MySQL` • `SQL Server`  
+MySQL • SQL Server  
 
 ### ⚙️ Software Development  
 - SDLC  
@@ -55,26 +55,16 @@ I enjoy problem-solving, writing clean code, and collaborating with teams to del
 - Technical Documentation  
 
 ### 🧰 Tools  
-`Git` • `GitHub` • `Visual Studio` • `Eclipse` • `Trello`  
-
----
-
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ntokozomaboa09&show_icons=true&theme=tokyonight" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ntokozomaboa09&theme=tokyonight" width="48%" />
-</p>
+Git • GitHub • Visual Studio • Eclipse • Trello  
 
 ---
 
 ## 🚀 What I Work On
 
 - Java & Python applications  
-- Web-based systems  
-- Database-driven solutions  
+- Web-based and database-driven systems  
 - Academic & personal projects  
-- Continuous learning & improvements  
+- Continuous learning and improvement  
 
 ---
 
@@ -102,6 +92,6 @@ If you’re looking for a **motivated junior developer or data analyst**, I’d 
 <div align="center">
 
 ⭐ **Thank you for visiting my GitHub portfolio!**  
-Feel free to explore my projects and follow my journey 🚀  
+Explore my repositories and follow my journey 🚀  
 
 </div>
