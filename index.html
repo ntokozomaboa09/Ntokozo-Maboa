@@ -4,34 +4,573 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ntokozo Maboa | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER & HERO SECTION */
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="black"/><path d="M20,20 L80,20 L80,40 L20,40 Z" fill="none" stroke="white" stroke-width="1"/><circle cx="50" cy="70" r="10" fill="none" stroke="white" stroke-width="1"/></svg>');
+      background-size: 200px;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="30" viewBox="0 0 100 30"><path d="M0,15 Q25,0 50,15 T100,15" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+      background-size: 300px;
+      opacity: 0.3;
+    }
+
+    nav {
+      padding: 25px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 900px;
+      position: relative;
+    }
+
+    .keyboard-visual {
+      width: 100%;
+      height: 150px;
+      margin: 40px auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .keyboard-line {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .key {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .key:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .key.special {
+      background: rgba(255, 255, 255, 0.15);
+      width: 80px;
+    }
+
+    .key.space {
+      width: 300px;
+    }
+
+    .name-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      letter-spacing: 5px;
+      z-index: 2;
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      letter-spacing: 3px;
+      color: #f0f0f0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .subtitle span {
+      display: inline-block;
+      padding: 5px 15px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      text-align: center;
+      position: relative;
+      letter-spacing: 2px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: black;
+    }
+
+    /* ABOUT SECTION */
+    .about-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      position: relative;
+      border: 1px solid #e0e0e0;
+    }
+
+    .about-text::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 1px solid #000;
+      border-radius: 15px;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    /* SKILLS SECTION */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e0e0e0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .skill-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      text-align: left;
+    }
+
+    .skill-card li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .skill-card li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #000;
+    }
+
+    /* PROJECTS SECTION */
+    .projects-list {
+      max-width: 800px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .projects-list li {
+      background: white;
+      margin: 25px 0;
+      padding: 30px;
+      border-left: 5px solid #000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .projects-list li:hover {
+      transform: translateX(10px);
+    }
+
+    .projects-list li::before {
+      content: '>';
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+      transition: left 0.3s;
+    }
+
+    .projects-list li:hover::before {
+      left: 10px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-info {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-info p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      transition: transform 0.3s;
+    }
+
+    .social-link:hover {
+      transform: translateY(-5px);
+    }
+
+    .social-icon {
+      width: 60px;
+      height: 60px;
+      background: #000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    footer p {
+      margin: 15px 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .footer-icons {
+      margin: 30px 0;
+      font-size: 1.5rem;
+    }
+
+    .footer-icons i {
+      margin: 0 15px;
+      opacity: 0.8;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .name-overlay {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+      }
+      
+      .key {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+      }
+      
+      .key.special {
+        width: 50px;
+      }
+      
+      .key.space {
+        width: 200px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .name-overlay {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+      }
+      
+      .keyboard-line {
+        gap: 4px;
+      }
+      
+      .key {
+        width: 22px;
+        height: 22px;
+        font-size: 0.6rem;
+      }
+      
+      .key.special {
+        width: 40px;
+      }
+      
+      .key.space {
+        width: 150px;
+      }
+      
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav a {
+        margin: 5px 8px;
+      }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .blink {
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="container">
-    <h1>Ntokozo Maboa</h1>
-    <p class="subtitle">Software Developer • Data Analyst • Systems Development Graduate</p>
-
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Work</a>
       <a href="#contact">Contact</a>
     </nav>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <!-- Keyboard Visual with Name Overlay -->
+        <div class="keyboard-visual">
+          <div class="name-overlay">NTOKOZO MABOA</div>
+          
+          <div class="keyboard-container">
+            <!-- Top row of keys -->
+            <div class="keyboard-line">
+              <div class="key">Q</div>
+              <div class="key">W</div>
+              <div class="key">E</div>
+              <div class="key">R</div>
+              <div class="key">T</div>
+              <div class="key">Y</div>
+              <div class="key">U</div>
+              <div class="key">I</div>
+              <div class="key">O</div>
+              <div class="key">P</div>
+            </div>
+            
+            <!-- Middle row -->
+            <div class="keyboard-line">
+              <div class="key">A</div>
+              <div class="key">S</div>
+              <div class="key">D</div>
+              <div class="key">F</div>
+              <div class="key">G</div>
+              <div class="key">H</div>
+              <div class="key">J</div>
+              <div class="key">K</div>
+              <div class="key">L</div>
+            </div>
+            
+            <!-- Bottom row -->
+            <div class="keyboard-line">
+              <div class="key special">Shift</div>
+              <div class="key">Z</div>
+              <div class="key">X</div>
+              <div class="key">C</div>
+              <div class="key">V</div>
+              <div class="key">B</div>
+              <div class="key">N</div>
+              <div class="key">M</div>
+              <div class="key special">Enter</div>
+            </div>
+            
+            <!-- Space bar -->
+            <div class="keyboard-line">
+              <div class="key space"></div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="subtitle">
+          <span>SOFTWARE DEVELOPER • DATA ANALYST • SYSTEMS DEVELOPMENT GRADUATE</span>
+        </p>
+      </div>
+    </div>
   </div>
 </header>
 
 <section id="about" class="section">
   <div class="container">
-    <h2>About Me</h2>
+    <h2 class="section-title">About Me</h2>
     <p class="about-text">
-      I’m <strong>Ntokozo Maboa</strong>, a Systems Development Graduate with a strong passion for
+      I'm <strong>Ntokozo Maboa</strong>, a Systems Development Graduate with a strong passion for
       software engineering and data analytics. I enjoy designing and building reliable,
       efficient systems that solve real-world problems, from database-driven applications
       to full-stack web solutions. I have a deep interest in how systems work behind the
       scenes, how data is structured and managed, and how meaningful insights can be
-      extracted to support better decision-making. I’m driven by problem-solving,
+      extracted to support better decision-making. I'm driven by problem-solving,
       continuous learning, and the challenge of turning ideas into scalable, user-friendly
       software. Whether working independently or as part of a team, I take pride in writing
       clean code, applying structured design principles, and delivering solutions that are
@@ -42,19 +581,55 @@
 
 <section id="skills" class="section">
   <div class="container">
-    <h2>Skills & Technologies</h2>
-    <ul class="skills-list">
-      <li><strong>Programming:</strong> Java, Python, JavaScript, SQL</li>
-      <li><strong>Web Development:</strong> HTML, CSS, PHP</li>
-      <li><strong>Databases:</strong> MySQL, SQL Server</li>
-      <li><strong>Tools & Platforms:</strong> Git, GitHub, Visual Studio, Netbeans, MySQL Workbench</li>
-    </ul>
+    <h2 class="section-title">Skills & Technologies</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Programming</h3>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <ul>
+          <li>HTML & CSS</li>
+          <li>PHP</li>
+          <li>Frontend Design</li>
+          <li>Responsive Layouts</li>
+        </ul>
+      </div>
+      
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Databases & Tools</h3>
+        <ul>
+          <li>MySQL, SQL Server</li>
+          <li>Git & GitHub</li>
+          <li>Visual Studio</li>
+          <li>NetBeans, MySQL Workbench</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="projects" class="section">
   <div class="container">
-    <h2>What I Work On</h2>
+    <h2 class="section-title">What I Work On</h2>
+    
     <ul class="projects-list">
       <li>Designing and developing software applications using Java and Python, with a focus on clean, maintainable, and efficient code</li>
       <li>Building full-stack, database-driven systems that combine intuitive user interfaces with secure backend logic</li>
@@ -67,23 +642,95 @@
 
 <section id="contact" class="section">
   <div class="container">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> ntokozomaboa0209@gmail.com</p>
-    <p><strong>Phone:</strong> 067 403 1185</p>
-    <p><strong>Location:</strong> South Africa</p>
-
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/ntokozo-maboa-a73a88353" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/ntokozo.maboa" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@ntokozo.maboa6" target="_blank">TikTok</a>
+    <h2 class="section-title">Contact</h2>
+    
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ntokozomaboa0209@gmail.com</p>
+      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 067 403 1185</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> South Africa</p>
+    </div>
+    
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/ntokozo-maboa-a73a88353" target="_blank" class="social-link">
+        <div class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <span>LinkedIn</span>
+      </a>
+      
+      <a href="https://www.instagram.com/ntokozo.maboa" target="_blank" class="social-link">
+        <div class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <span>Instagram</span>
+      </a>
+      
+      <a href="https://www.tiktok.com/@ntokozo.maboa6" target="_blank" class="social-link">
+        <div class="social-icon">
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <span>TikTok</span>
+      </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>⭐ Thank you for visiting my GitHub portfolio! Explore my repositories and follow my journey 🚀</p>
-  <p>© 2025 Ntokozo Maboa</p>
+  <div class="footer-icons">
+    <i class="fas fa-laptop-code blink"></i>
+    <i class="fas fa-code"></i>
+    <i class="fas fa-database"></i>
+  </div>
+  
+  <p>⭐ Thank you for visiting my portfolio! Explore my repositories and follow my journey 🚀</p>
+  <p>© 2025 Ntokozo Maboa | Software Developer & Data Analyst</p>
 </footer>
+
+<script>
+  // Add interactive keyboard key effects
+  document.addEventListener('DOMContentLoaded', function() {
+    const keys = document.querySelectorAll('.key');
+    
+    keys.forEach(key => {
+      // Add click effect
+      key.addEventListener('mousedown', function() {
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+        this.style.transform = 'translateY(2px)';
+      });
+      
+      key.addEventListener('mouseup', function() {
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        this.style.transform = 'translateY(0)';
+      });
+      
+      key.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        this.style.transform = 'translateY(0)';
+      });
+      
+      // Add random animation delay for visual interest
+      const randomDelay = Math.random() * 2;
+      key.style.animationDelay = `${randomDelay}s`;
+    });
+    
+    // Typewriter effect for the name
+    const nameElement = document.querySelector('.name-overlay');
+    const originalName = nameElement.textContent;
+    nameElement.textContent = '';
+    
+    let i = 0;
+    function typeWriter() {
+      if (i < originalName.length) {
+        nameElement.textContent += originalName.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    
+    // Start typewriter effect after a short delay
+    setTimeout(typeWriter, 1000);
+  });
+</script>
 
 </body>
 </html>
