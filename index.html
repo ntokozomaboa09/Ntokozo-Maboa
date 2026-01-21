@@ -6,7 +6,6 @@
   <title>Ntokozo Maboa | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* ===== BASE STYLES ===== */
     * {
       margin: 0;
       padding: 0;
@@ -45,7 +44,6 @@
       margin-bottom: 40px;
     }
 
-    /* ===== SIMPLE HEADER ===== */
     header {
       background: #000000;
       color: #ffffff;
@@ -62,7 +60,6 @@
       z-index: 2;
     }
 
-    /* Clean Name Display */
     .name-display {
       font-size: 4rem;
       font-weight: 800;
@@ -74,7 +71,6 @@
       color: #00d9ff;
     }
 
-    /* Simple Subtitle */
     .subtitle {
       font-size: 1.5rem;
       margin-bottom: 40px;
@@ -82,7 +78,6 @@
       letter-spacing: 1px;
     }
 
-    /* Minimal Keyboard */
     .keyboard-minimal {
       max-width: 600px;
       margin: 40px auto 0;
@@ -122,7 +117,6 @@
       background: rgba(0, 217, 255, 0.2);
     }
 
-    /* Navigation */
     nav {
       position: absolute;
       top: 30px;
@@ -151,7 +145,6 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* ===== ABOUT SECTION ===== */
     #about {
       background: #f8f9fa;
     }
@@ -171,7 +164,6 @@
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
 
-    /* ===== SKILLS SECTION ===== */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -220,7 +212,6 @@
       color: #00d9ff;
     }
 
-    /* ===== UPDATED MY APPROACH SECTION ===== */
     #approach {
       background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
       position: relative;
@@ -330,7 +321,8 @@
     .data-engineer .approach-icon { background: linear-gradient(135deg, #20c997, #00b894); }
     .database .approach-icon { background: linear-gradient(135deg, #ff6b6b, #ff4757); }
     .problem-solver .approach-icon { background: linear-gradient(135deg, #ff922b, #fd7e14); }
-    .learner .approach-icon { background: linear-gradient(135deg, #be4bdb, #ae3ec9); }
+    .collaborator .approach-icon { background: linear-gradient(135deg, #be4bdb, #ae3ec9); }
+    .learner .approach-icon { background: linear-gradient(135deg, #339af0, #228be6); }
 
     .approach-title {
       font-size: 1.7rem;
@@ -347,7 +339,6 @@
       margin-left: 5px;
     }
 
-    /* ===== CONTACT SECTION (UPDATED) ===== */
     #contact {
       background: #f8f9fa;
     }
@@ -425,7 +416,6 @@
       transform: translateY(-5px) scale(1.1);
     }
 
-    /* ===== FOOTER ===== */
     footer {
       background: #000000;
       color: #ffffff;
@@ -433,7 +423,6 @@
       padding: 60px 0;
     }
 
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5rem;
@@ -548,7 +537,6 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <nav>
       <div class="container">
@@ -587,7 +575,6 @@
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
@@ -603,7 +590,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills" class="section">
     <div class="container">
       <h2>Skills & Technologies</h2>
@@ -650,7 +636,6 @@
     </div>
   </section>
 
-  <!-- My Approach Section -->
   <section id="approach" class="section">
     <div class="container">
       <h2>My Approach</h2>
@@ -658,7 +643,6 @@
       
       <div class="approach-container">
         <div class="approach-cards">
-          <!-- Architect & Developer -->
           <div class="approach-card architect">
             <div class="card-header">
               <div class="approach-icon">
@@ -669,7 +653,6 @@
             <p>I build full-stack applications with <strong>Java</strong> and <strong>Python</strong>. My focus is on clean, efficient, and scalable code that forms reliable digital foundations.</p>
           </div>
           
-          <!-- Data-Informed Engineer -->
           <div class="approach-card data-engineer">
             <div class="card-header">
               <div class="approach-icon">
@@ -680,7 +663,6 @@
             <p>I integrate data analysis directly into the development lifecycle. This ensures every feature is guided by real user behavior and system metrics.</p>
           </div>
           
-          <!-- System & Database Designer -->
           <div class="approach-card database">
             <div class="card-header">
               <div class="approach-icon">
@@ -691,7 +673,6 @@
             <p>I design intuitive systems paired with robust relational databases. I write optimized SQL and ensure strict data integrity and security.</p>
           </div>
           
-          <!-- Problem Solver -->
           <div class="approach-card problem-solver">
             <div class="card-header">
               <div class="approach-icon">
@@ -702,7 +683,16 @@
             <p>I transform complex challenges into practical software solutions. My process uses structured analysis for innovative, user-centric results.</p>
           </div>
           
-          <!-- Continuous Learner -->
+          <div class="approach-card collaborator">
+            <div class="card-header">
+              <div class="approach-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="approach-title">Team Collaborator</h3>
+            </div>
+            <p>I excel in collaborative environments, working seamlessly with cross-functional teams to align technical solutions with business objectives and user needs.</p>
+          </div>
+          
           <div class="approach-card learner">
             <div class="card-header">
               <div class="approach-icon">
@@ -717,7 +707,6 @@
     </div>
   </section>
 
-  <!-- Contact Section (Updated with second email) -->
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
@@ -764,7 +753,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p style="font-size: 1.2rem; margin-bottom: 20px;">⭐ Thank you for visiting my portfolio! 🚀</p>
@@ -773,7 +761,6 @@
   </footer>
 
   <script>
-    // Simple hover effect for keys
     document.querySelectorAll('.key').forEach(key => {
       key.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-5px)';
@@ -786,7 +773,6 @@
       });
     });
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -803,7 +789,6 @@
       });
     });
 
-    // Simple typing effect for name (optional)
     const nameElement = document.querySelector('.name-display');
     const originalText = nameElement.textContent;
     nameElement.textContent = '';
@@ -817,10 +802,8 @@
       }
     }
     
-    // Start typing after a short delay
     setTimeout(typeName, 500);
     
-    // Add subtle animation to approach cards on scroll
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -835,7 +818,6 @@
       });
     }, observerOptions);
 
-    // Apply to approach cards
     document.querySelectorAll('.approach-card').forEach(card => {
       card.style.opacity = '0';
       card.style.transform = 'translateY(20px)';
