@@ -55,7 +55,7 @@ MySQL • SQL Server
 - Technical documentation and reporting  
 
 ### 🧰 Tools & Platforms  
-Git • GitHub • Visual Studio • NetBeans • Trello  
+Git • GitHub • Visual Studio • NetBeans • MySQL Workbench 
 
 ---
 
