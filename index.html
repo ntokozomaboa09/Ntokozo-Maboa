@@ -6,11 +6,15 @@
   <title>Ntokozo Maboa | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* ===== BASE STYLES ===== */
+    /* ===== RESET & BASE STYLES ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -21,18 +25,17 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
     .section {
-      padding: 80px 0;
+      padding: 100px 0;
     }
 
     h1, h2, h3 {
       font-weight: 700;
-      margin-bottom: 20px;
     }
 
     h1 {
@@ -40,12 +43,24 @@
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      position: relative;
     }
 
-    /* ===== SIMPLE HEADER ===== */
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #000000, #4dabf7);
+    }
+
+    /* ===== HEADER ===== */
     header {
       background: #000000;
       color: #ffffff;
@@ -53,16 +68,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: relative;
     }
 
     .header-content {
       text-align: center;
-      position: relative;
-      z-index: 2;
     }
 
-    /* Clean Name Display */
     .name-display {
       font-size: 4rem;
       font-weight: 800;
@@ -71,64 +82,53 @@
     }
 
     .name-display span {
-      color: #00d9ff;
+      color: #4dabf7;
     }
 
-    /* Simple Subtitle */
     .subtitle {
       font-size: 1.5rem;
       margin-bottom: 40px;
       opacity: 0.9;
-      letter-spacing: 1px;
     }
 
-    /* Minimal Keyboard */
-    .keyboard-minimal {
+    .simple-keyboard {
       max-width: 600px;
       margin: 40px auto 0;
       padding: 30px;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
-      backdrop-filter: blur(10px);
     }
 
     .key-row {
       display: flex;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 12px;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
     .key {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
       font-weight: 600;
       transition: all 0.3s ease;
+      color: #ffffff;
     }
 
     .key:hover {
-      background: rgba(0, 217, 255, 0.3);
+      background: rgba(77, 171, 247, 0.3);
       transform: translateY(-3px);
     }
 
-    .key.shift {
-      width: 100px;
-      background: rgba(0, 217, 255, 0.2);
-    }
-
-    /* Navigation */
     nav {
       position: absolute;
       top: 30px;
       left: 0;
       right: 0;
-      z-index: 100;
     }
 
     .nav-links {
@@ -141,7 +141,7 @@
     .nav-link {
       color: #ffffff;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       padding: 10px 20px;
       border-radius: 25px;
       transition: all 0.3s ease;
@@ -151,9 +151,169 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* ===== ABOUT SECTION ===== */
-    #about {
+    /* ===== MY APPROACH SECTION ===== */
+    #approach {
       background: #f8f9fa;
+    }
+
+    .approach-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-intro {
+      text-align: center;
+      font-size: 1.3rem;
+      color: #555;
+      margin-bottom: 60px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .approach-card {
+      background: #ffffff;
+      padding: 40px 35px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+      height: 100%;
+    }
+
+    .approach-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, #000000, #4dabf7);
+      transition: width 0.3s ease;
+    }
+
+    .approach-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .approach-card:hover::before {
+      width: 8px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      gap: 20px;
+    }
+
+    .approach-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #000000, #333333);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .approach-card:nth-child(1) .approach-icon {
+      background: linear-gradient(135deg, #4dabf7, #339af0);
+    }
+
+    .approach-card:nth-child(2) .approach-icon {
+      background: linear-gradient(135deg, #51cf66, #40c057);
+    }
+
+    .approach-card:nth-child(3) .approach-icon {
+      background: linear-gradient(135deg, #ff922b, #fd7e14);
+    }
+
+    .approach-card:nth-child(4) .approach-icon {
+      background: linear-gradient(135deg, #ff6b6b, #fa5252);
+    }
+
+    .approach-card:nth-child(5) .approach-icon {
+      background: linear-gradient(135deg, #be4bdb, #ae3ec9);
+    }
+
+    .approach-title {
+      font-size: 1.6rem;
+      color: #000000;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .approach-description {
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-left: 5px;
+    }
+
+    .approach-description strong {
+      color: #000000;
+      font-weight: 600;
+    }
+
+    /* Tech Stack Section */
+    .tech-stack {
+      text-align: center;
+      padding-top: 50px;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .tech-stack h3 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tech-tag {
+      background: #ffffff;
+      color: #000000;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid #000000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .tech-tag:hover {
+      background: #000000;
+      color: #ffffff;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ===== OTHER SECTIONS (Simplified) ===== */
+    #about {
+      background: #ffffff;
     }
 
     .about-content {
@@ -166,17 +326,18 @@
       font-size: 1.2rem;
       line-height: 1.8;
       padding: 40px;
-      background: #ffffff;
+      background: #f8f9fa;
       border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
 
-    /* ===== SKILLS SECTION ===== */
+    #skills {
+      background: #f8f9fa;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
-      margin-top: 40px;
     }
 
     .skill-card {
@@ -184,68 +345,12 @@
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
     }
 
-    .skill-card:hover {
-      transform: translateY(-10px);
-    }
-
-    .skill-icon {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #000000;
-    }
-
-    .skill-card h3 {
-      color: #000000;
-      margin-bottom: 15px;
-    }
-
-    .skill-list {
-      list-style: none;
-    }
-
-    .skill-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .skill-list li:before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #00d9ff;
-    }
-
-    /* ===== PROJECTS SECTION ===== */
-    #projects {
-      background: #f8f9fa;
-    }
-
-    .projects-list {
-      max-width: 800px;
-      margin: 0 auto;
-      list-style: none;
-    }
-
-    .project-item {
+    #contact {
       background: #ffffff;
-      padding: 30px;
-      margin-bottom: 20px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      border-left: 5px solid #00d9ff;
-      transition: transform 0.3s ease;
     }
 
-    .project-item:hover {
-      transform: translateX(10px);
-    }
-
-    /* ===== CONTACT SECTION ===== */
     .contact-info {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -256,15 +361,8 @@
     .contact-item {
       text-align: center;
       padding: 30px;
-      background: #ffffff;
+      background: #f8f9fa;
       border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact-icon {
-      font-size: 2rem;
-      color: #00d9ff;
-      margin-bottom: 15px;
     }
 
     .social-links {
@@ -288,11 +386,10 @@
     }
 
     .social-link:hover {
-      background: #00d9ff;
+      background: #4dabf7;
       transform: translateY(-5px);
     }
 
-    /* ===== FOOTER ===== */
     footer {
       background: #000000;
       color: #ffffff;
@@ -301,78 +398,79 @@
     }
 
     /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      .approach-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+    }
+
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
       
       h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       
       .name-display {
         font-size: 3rem;
       }
       
-      .subtitle {
-        font-size: 1.2rem;
+      .approach-card {
+        padding: 30px 25px;
+      }
+      
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      
+      .approach-title {
+        font-size: 1.4rem;
+      }
+      
+      .tech-tag {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
       
       .nav-links {
         gap: 20px;
       }
       
-      .nav-link {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-      }
-      
-      .key {
-        width: 40px;
-        height: 40px;
-        font-size: 0.9rem;
-      }
-      
-      .key.shift {
-        width: 80px;
-      }
-      
       .section {
-        padding: 60px 0;
+        padding: 80px 0;
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
       }
       
       .name-display {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+      }
+      
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .tech-tags {
+        gap: 10px;
       }
       
       .nav-links {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-      }
-      
-      .keyboard-minimal {
-        padding: 20px;
-      }
-      
-      .key-row {
-        flex-wrap: wrap;
-      }
-      
-      .key {
-        width: 35px;
-        height: 35px;
-        font-size: 0.8rem;
-      }
-      
-      .key.shift {
-        width: 70px;
       }
     }
   </style>
@@ -384,8 +482,8 @@
       <div class="container">
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#approach" class="nav-link">My Approach</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -395,7 +493,7 @@
       <h1 class="name-display">NTOKOZO <span>MABOA</span></h1>
       <p class="subtitle">Software Developer • Data Analyst • Systems Development Graduate</p>
       
-      <div class="keyboard-minimal">
+      <div class="simple-keyboard">
         <div class="key-row">
           <div class="key">N</div>
           <div class="key">T</div>
@@ -411,7 +509,6 @@
           <div class="key">B</div>
           <div class="key">O</div>
           <div class="key">A</div>
-          <div class="key shift">SHIFT</div>
         </div>
       </div>
     </div>
@@ -423,11 +520,106 @@
       <h2>About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>I'm <strong>Ntokozo Maboa</strong>, a Systems Development Graduate with a strong passion for software engineering and data analytics. I enjoy designing and building reliable, efficient systems that solve real-world problems.</p>
+          <p>I'm <strong>Ntokozo Maboa</strong>, a Systems Development Graduate with a passion for creating software solutions that are both technically robust and user-focused. My journey combines software engineering with data analytics to build systems that not only function efficiently but also deliver meaningful insights.</p>
           
-          <p>From database-driven applications to full-stack web solutions, I have a deep interest in how systems work behind the scenes, how data is structured and managed, and how meaningful insights can be extracted to support better decision-making.</p>
+          <p>I believe in writing clean, maintainable code and designing systems that stand the test of time. Whether working on backend architecture, database design, or full-stack applications, I approach every project with attention to detail and a commitment to excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Approach Section (formerly "What I Work On") -->
+  <section id="approach" class="section">
+    <div class="container">
+      <h2>My Approach</h2>
+      <p class="section-intro">A blend of technical expertise and strategic thinking that transforms complex challenges into elegant digital solutions.</p>
+      
+      <div class="approach-container">
+        <div class="approach-grid">
           
-          <p>I'm driven by problem-solving, continuous learning, and the challenge of turning ideas into scalable, user-friendly software. Whether working independently or as part of a team, I take pride in writing clean code, applying structured design principles, and delivering solutions that are both functional and impactful.</p>
+          <!-- Architect & Developer -->
+          <div class="approach-card">
+            <div class="card-header">
+              <div class="approach-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3 class="approach-title">Architect & Developer</h3>
+            </div>
+            <p class="approach-description">
+              I build full-stack applications with <strong>Java</strong> and <strong>Python</strong>. My focus is on clean, efficient, and scalable code that forms reliable digital foundations for both today's needs and tomorrow's growth.
+            </p>
+          </div>
+          
+          <!-- Data-Informed Engineer -->
+          <div class="approach-card">
+            <div class="card-header">
+              <div class="approach-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="approach-title">Data-Informed Engineer</h3>
+            </div>
+            <p class="approach-description">
+              I integrate data analysis directly into the development lifecycle. This ensures every feature is guided by real user behavior and system metrics, creating software that truly serves its purpose.
+            </p>
+          </div>
+          
+          <!-- System & Database Designer -->
+          <div class="approach-card">
+            <div class="card-header">
+              <div class="approach-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3 class="approach-title">System & Database Designer</h3>
+            </div>
+            <p class="approach-description">
+              I design intuitive systems paired with robust relational databases. I write optimized SQL and ensure strict data integrity and security, building the strong foundations that applications depend on.
+            </p>
+          </div>
+          
+          <!-- Problem Solver -->
+          <div class="approach-card">
+            <div class="card-header">
+              <div class="approach-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3 class="approach-title">Problem Solver</h3>
+            </div>
+            <p class="approach-description">
+              I transform complex challenges into practical software solutions. My process uses structured analysis for innovative, user-centric results that address real needs with elegant technical solutions.
+            </p>
+          </div>
+          
+          <!-- Continuous Learner -->
+          <div class="approach-card">
+            <div class="card-header">
+              <div class="approach-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="approach-title">Continuous Learner</h3>
+            </div>
+            <p class="approach-description">
+              I stay ahead by exploring new technologies and refining best practices. My goal is to build systems that are both modern and enduring, constantly evolving with the technological landscape.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="tech-stack">
+          <h3>Core Technologies</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Git & GitHub</span>
+            <span class="tech-tag">System Design</span>
+            <span class="tech-tag">Data Analysis</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">Database Design</span>
+          </div>
         </div>
       </div>
     </div>
@@ -436,100 +628,44 @@
   <!-- Skills Section -->
   <section id="skills" class="section">
     <div class="container">
-      <h2>Skills & Technologies</h2>
+      <h2>Skills & Expertise</h2>
       <div class="skills-grid">
         <div class="skill-card">
-          <div class="skill-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>Programming</h3>
-          <ul class="skill-list">
-            <li>Java</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-          </ul>
+          <h3><i class="fas fa-code" style="color: #4dabf7; margin-right: 10px;"></i>Programming</h3>
+          <p>Java, Python, JavaScript, SQL</p>
         </div>
-        
         <div class="skill-card">
-          <div class="skill-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3>Web Development</h3>
-          <ul class="skill-list">
-            <li>HTML & CSS</li>
-            <li>PHP</li>
-            <li>Frontend Development</li>
-            <li>Responsive Design</li>
-          </ul>
+          <h3><i class="fas fa-laptop-code" style="color: #51cf66; margin-right: 10px;"></i>Web Development</h3>
+          <p>HTML, CSS, PHP, Frontend Development</p>
         </div>
-        
         <div class="skill-card">
-          <div class="skill-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <h3>Tools & Databases</h3>
-          <ul class="skill-list">
-            <li>MySQL & SQL Server</li>
-            <li>Git & GitHub</li>
-            <li>Visual Studio</li>
-            <li>NetBeans</li>
-          </ul>
+          <h3><i class="fas fa-database" style="color: #ff922b; margin-right: 10px;"></i>Databases</h3>
+          <p>MySQL, SQL Server, Database Design</p>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fas fa-tools" style="color: #be4bdb; margin-right: 10px;"></i>Tools</h3>
+          <p>Git, GitHub, Visual Studio, NetBeans</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>What I Work On</h2>
-      <ul class="projects-list">
-        <li class="project-item">
-          Designing and developing software applications using Java and Python, with a focus on clean, maintainable, and efficient code
-        </li>
-        <li class="project-item">
-          Building full-stack, database-driven systems that combine intuitive user interfaces with secure backend logic
-        </li>
-        <li class="project-item">
-          Creating practical and innovative solutions that address real-world challenges through structured system analysis and design
-        </li>
-        <li class="project-item">
-          Working with relational databases to model data, write optimized SQL queries, and ensure data integrity
-        </li>
-        <li class="project-item">
-          Continuously improving technical skills by exploring new technologies, refining existing solutions, and applying industry best practices
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact</h2>
+      <h2>Get In Touch</h2>
       <div class="contact-info">
         <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h3>Email</h3>
+          <h3><i class="fas fa-envelope"></i> Email</h3>
           <p>ntokozomaboa0209@gmail.com</p>
+           <h3><i class="fas fa-envelope"></i> Email</h3>
+          <p>ntokozomaboa9@icloud.com</p>
         </div>
-        
         <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <h3>Phone</h3>
+          <h3><i class="fas fa-phone"></i> Phone</h3>
           <p>067 403 1185</p>
         </div>
-        
         <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h3>Location</h3>
+          <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
           <p>South Africa</p>
         </div>
       </div>
@@ -548,20 +684,19 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p style="font-size: 1.2rem; margin-bottom: 20px;">⭐ Thank you for visiting my portfolio! 🚀</p>
-      <p>© 2025 Ntokozo Maboa | Software Developer & Data Analyst</p>
+      <p style="font-size: 1.3rem; margin-bottom: 20px;">Building the future, one line of code at a time.</p>
+      <p>© 2025 Ntokozo Maboa | Software Architect & Developer</p>
     </div>
   </footer>
 
   <script>
-    // Simple hover effect for keys
+    
     document.querySelectorAll('.key').forEach(key => {
       key.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-5px)';
-        this.style.boxShadow = '0 5px 15px rgba(0, 217, 255, 0.3)';
+        this.style.boxShadow = '0 5px 15px rgba(77, 171, 247, 0.3)';
       });
       
       key.addEventListener('mouseleave', function() {
@@ -570,7 +705,6 @@
       });
     });
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -587,22 +721,25 @@
       });
     });
 
-    // Simple typing effect for name (optional)
-    const nameElement = document.querySelector('.name-display');
-    const originalText = nameElement.textContent;
-    nameElement.textContent = '';
-    
-    let charIndex = 0;
-    function typeName() {
-      if (charIndex < originalText.length) {
-        nameElement.textContent += originalText.charAt(charIndex);
-        charIndex++;
-        setTimeout(typeName, 50);
-      }
-    }
-    
-    // Start typing after a short delay
-    setTimeout(typeName, 500);
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.approach-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
   </script>
 </body>
 </html>
