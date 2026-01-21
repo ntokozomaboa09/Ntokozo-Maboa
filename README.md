@@ -17,23 +17,23 @@
 ## 👋 Welcome
 
 I’m **Ntokozo Maboa**, a **Systems Development Graduate** with a strong passion for **software engineering and data analytics**.  
-I enjoy building **reliable applications**, working with **databases**, and turning **data into insights**.
+I enjoy building **reliable software systems**, working with **structured data**, and transforming information into **meaningful insights** that support better decision-making.
 
-I’m actively seeking **graduate or entry-level opportunities** where I can grow, learn, and contribute to impactful projects.
+I am actively seeking **graduate or entry-level opportunities** where I can grow professionally, contribute to impactful projects, and continuously sharpen my technical skills.
 
 ---
 
 ## 🧠 About Me
 
-I hold a **Diploma in Systems Development from Boston City Campus**.  
-My academic background has equipped me with strong skills in:
+I hold a **Diploma in Systems Development from Boston City Campus**, where I developed a strong foundation in both theory and practical application.  
+My training equipped me with skills in:
 
-- Software development  
-- Database systems  
-- Systems analysis  
-- Technical documentation  
+- Software development and system design  
+- Database development and management  
+- Systems analysis and documentation  
+- Problem-solving using structured approaches  
 
-I enjoy solving problems, writing clean code, and working with teams to build useful solutions.
+I enjoy tackling complex challenges, writing clean and maintainable code, and collaborating with others to deliver effective technical solutions.
 
 ---
 
@@ -42,46 +42,48 @@ I enjoy solving problems, writing clean code, and working with teams to build us
 ### 💻 Programming  
 Java • Python • JavaScript • SQL  
 
-### 🌐 Web  
+### 🌐 Web Development  
 HTML • CSS • PHP  
 
 ### 🗄️ Databases  
 MySQL • SQL Server  
 
-### ⚙️ Software Development  
-- SDLC  
-- Debugging & Testing  
-- Systems Analysis (DFDs, Use Cases, Flowcharts)  
-- Technical Documentation  
+### ⚙️ Software Development Knowledge  
+- Software Development Life Cycle (SDLC)  
+- Debugging, testing, and optimization  
+- Systems analysis (DFDs, flowcharts, use cases)  
+- Technical documentation and reporting  
 
-### 🧰 Tools  
-Git • GitHub • Visual Studio • Netbeans • Trello  
+### 🧰 Tools & Platforms  
+Git • GitHub • Visual Studio • NetBeans • Trello  
 
 ---
 
 ## 🚀 What I Work On
 
-- Java & Python applications  
-- Web-based and database-driven systems  
-- Academic & personal projects  
-- Continuous learning and improvement  
+- Designing and developing software applications using **Java and Python**, with a strong focus on clean code, performance, and scalability  
+- Building **full-stack, database-driven systems** that combine intuitive user interfaces with secure and efficient backend logic  
+- Creating **practical and innovative solutions** that address real-world challenges through structured system analysis and design  
+- Working with **relational databases** to model data, write optimized SQL queries, and maintain data integrity  
+- Continuously improving my skills by exploring new technologies, refining existing solutions, and applying **industry best practices**  
 
 ---
 
 ## 🌱 Currently Learning
 
-- Advanced Java & Python  
-- Data analytics & reporting  
-- Clean code & software design  
+- Advancing my skills in **Java and Python** by building more complex, real-world applications  
+- Expanding my knowledge in **data analytics and reporting**, focusing on extracting insights from structured datasets  
+- Improving **clean code practices, software architecture, and design principles** to build scalable and maintainable systems  
 
 ---
 
 ## 📬 Contact Me
 
-If you’re looking for a **motivated junior developer or data analyst**, I’d love to connect.
+If you’re looking for a **motivated junior software developer or data analyst** who is eager to learn and contribute, I’d love to connect.
 
 📍 South Africa  
 📧 **ntokozomaboa0209@gmail.com**  
+📧 **ntokozomaboa9@icloud.com**  
 
 🔗 [LinkedIn](https://www.linkedin.com/in/ntokozo-maboa-a73a88353)  
 📸 [Instagram](https://www.instagram.com/ntokozo.maboa?igsh=ajlxcnRkdWUwMGE1&utm_source=qr)  
