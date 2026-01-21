@@ -7,10 +7,10 @@
 
 /* BODY */
 body {
-  font-family: 'Arial', sans-serif;
-  background: #fff;
-  color: #111;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.7;
 }
 
 /* CONTAINER */
@@ -22,8 +22,8 @@ body {
 
 /* HEADER */
 header {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   text-align: center;
   padding: 60px 20px;
 }
@@ -35,27 +35,24 @@ header h1 {
 
 header .subtitle {
   font-size: 1.2rem;
-  color: #ccc;
   margin-bottom: 20px;
 }
 
 header nav a {
-  color: #fff;
+  color: #ffffff;
   margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s;
 }
 
 header nav a:hover {
-  color: #aaa;
   text-decoration: underline;
 }
 
 /* SECTIONS */
 .section {
   padding: 60px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000000;
 }
 
 .section h2 {
@@ -64,22 +61,26 @@ header nav a:hover {
   text-align: center;
 }
 
-.skills-list, .projects-list {
-  list-style-type: none;
-  padding-left: 0;
+/* ABOUT TEXT */
+.about-text {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.05rem;
 }
 
-.skills-list li, .projects-list li {
-  background: #f4f4f4;
-  margin: 8px 0;
-  padding: 12px 15px;
-  border-left: 5px solid #000;
-  transition: all 0.3s;
+/* LISTS */
+.skills-list,
+.projects-list {
+  list-style: none;
 }
 
-.skills-list li:hover, .projects-list li:hover {
-  border-left-color: #555;
-  background: #eee;
+.skills-list li,
+.projects-list li {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 14px 16px;
+  border: 2px solid #000000;
 }
 
 /* SOCIAL LINKS */
@@ -89,22 +90,20 @@ header nav a:hover {
 }
 
 .socials a {
-  color: #000;
+  color: #000000;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 .socials a:hover {
-  color: #555;
   text-decoration: underline;
 }
 
 /* FOOTER */
 footer {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   text-align: center;
   padding: 30px 20px;
   font-size: 0.9rem;
