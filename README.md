@@ -55,7 +55,7 @@ MySQL • SQL Server
 - Technical Documentation  
 
 ### 🧰 Tools  
-Git • GitHub • Visual Studio • Eclipse • Trello  
+Git • GitHub • Visual Studio • Netbeans • Trello  
 
 ---
 
