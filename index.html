@@ -6,274 +6,90 @@
   <title>Ntokozo Maboa | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* ===== RESET & BASE STYLES ===== */
+    /* ===== BASE STYLES ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
       background: #ffffff;
       color: #000000;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* ===== ENHANCED HEADER SECTION ===== */
+    .section {
+      padding: 80px 0;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* ===== SIMPLE HEADER ===== */
     header {
+      background: #000000;
+      color: #ffffff;
       min-height: 100vh;
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.03) 0%, transparent 50%),
-        linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
-      position: relative;
-      overflow: hidden;
       display: flex;
-      align-items: center;
-    }
-
-    /* Circuit Board Background Pattern */
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        linear-gradient(90deg, transparent 99%, rgba(255, 255, 255, 0.03) 100%),
-        linear-gradient(0deg, transparent 99%, rgba(255, 255, 255, 0.03) 100%);
-      background-size: 50px 50px;
-      opacity: 0.3;
-      z-index: 1;
-    }
-
-    /* Animated Glow Effect */
-    header::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-      animation: rotate 30s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
     }
 
     .header-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      padding: 40px 0;
-    }
-
-    /* ===== MODERN COMPUTER INTERFACE ===== */
-    .computer-interface {
-      max-width: 900px;
-      margin: 0 auto;
-      background: linear-gradient(145deg, #111111, #0a0a0a);
-      border-radius: 24px;
-      padding: 40px;
-      box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Computer Screen Bezel */
-    .computer-interface::before {
-      content: '';
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      height: 40px;
-      background: linear-gradient(to bottom, #222222, #1a1a1a);
-      border-radius: 12px 12px 0 0;
-      z-index: 1;
-    }
-
-    /* Screen Indicator Lights */
-    .computer-interface::after {
-      content: '';
-      position: absolute;
-      top: 30px;
-      left: 40px;
-      width: 12px;
-      height: 12px;
-      background: #ff5f57;
-      border-radius: 50%;
-      box-shadow: 
-        25px 0 0 #ffbd2e,
-        50px 0 0 #28ca42;
-      z-index: 2;
-    }
-
-    /* Terminal Display Area */
-    .terminal-display {
-      background: #000000;
-      border-radius: 16px;
-      padding: 40px;
-      min-height: 300px;
-      position: relative;
-      overflow: hidden;
-      border: 2px solid #222222;
-      box-shadow: inset 0 0 30px rgba(0, 255, 0, 0.1);
-    }
-
-    /* Scan Lines Effect */
-    .terminal-display::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 255, 0, 0.03) 0px,
-        rgba(0, 255, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 2px
-      );
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    /* ===== ENHANCED NAME DISPLAY ===== */
-    .name-terminal {
-      font-family: 'Courier New', monospace;
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: #00ff9d;
-      text-shadow: 
-        0 0 10px rgba(0, 255, 157, 0.5),
-        0 0 20px rgba(0, 255, 157, 0.3);
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-      letter-spacing: 2px;
-    }
-
-    .name-terminal::before {
-      content: '> ';
-      color: #00ff9d;
-      animation: blink 1s infinite;
-    }
-
-    /* Keyboard Command Indicator */
-    .command-line {
-      font-family: 'Courier New', monospace;
-      color: #ffffff;
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      padding-left: 20px;
-      position: relative;
-      opacity: 0.9;
-    }
-
-    .command-line::before {
-      content: '~$ ';
-      color: #00ff9d;
-      position: absolute;
-      left: 0;
-    }
-
-    /* ===== PROFESSIONAL TITLE ===== */
-    .professional-title {
-      background: linear-gradient(135deg, 
-        rgba(0, 255, 157, 0.1) 0%, 
-        rgba(0, 255, 157, 0.05) 100%);
-      padding: 25px 40px;
-      border-radius: 12px;
-      margin: 30px 0;
-      border: 1px solid rgba(0, 255, 157, 0.2);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .professional-title::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(0, 255, 157, 0.1),
-        transparent
-      );
-      transform: translateX(-100%);
-      animation: shine 3s infinite;
-    }
-
-    @keyframes shine {
-      100% { transform: translateX(100%); }
-    }
-
-    .title-line {
-      font-size: 1.3rem;
-      color: #ffffff;
       text-align: center;
-      margin: 10px 0;
-      letter-spacing: 3px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .title-line:nth-child(1) {
-      color: #00ff9d;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .title-line:nth-child(2) {
-      opacity: 0.9;
-      font-size: 1.2rem;
-    }
-
-    /* ===== VISUAL KEYBOARD COMPONENT ===== */
-    .keyboard-visual {
-      background: linear-gradient(145deg, #1a1a1a, #111111);
-      padding: 30px;
-      border-radius: 16px;
-      margin-top: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
       position: relative;
+      z-index: 2;
     }
 
-    .keyboard-visual::before {
-      content: 'KEYBOARD INTERFACE';
-      position: absolute;
-      top: -12px;
-      left: 20px;
-      background: #000000;
-      color: #00ff9d;
-      padding: 0 10px;
-      font-size: 0.9rem;
+    /* Clean Name Display */
+    .name-display {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 20px;
       letter-spacing: 2px;
+    }
+
+    .name-display span {
+      color: #00d9ff;
+    }
+
+    /* Simple Subtitle */
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+      letter-spacing: 1px;
+    }
+
+    /* Minimal Keyboard */
+    .keyboard-minimal {
+      max-width: 600px;
+      margin: 40px auto 0;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
     }
 
     .key-row {
@@ -284,103 +100,40 @@
     }
 
     .key {
-      min-width: 60px;
-      height: 60px;
-      background: linear-gradient(145deg, #222222, #1a1a1a);
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #ffffff;
       font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
     }
 
     .key:hover {
-      transform: translateY(-4px);
-      background: linear-gradient(145deg, #2a2a2a, #222222);
-      box-shadow: 
-        0 8px 16px rgba(0, 0, 0, 0.4),
-        0 0 0 2px rgba(0, 255, 157, 0.3);
-      color: #00ff9d;
+      background: rgba(0, 217, 255, 0.3);
+      transform: translateY(-3px);
     }
 
-    .key.active {
-      animation: keyPress 0.3s ease;
-      background: linear-gradient(145deg, #00ff9d, #00cc7a);
-      color: #000000;
+    .key.shift {
+      width: 100px;
+      background: rgba(0, 217, 255, 0.2);
     }
 
-    @keyframes keyPress {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
-    .key::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        135deg,
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-      );
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .key:hover::after {
-      opacity: 1;
-    }
-
-    .key.shift-key {
-      min-width: 140px;
-      background: linear-gradient(145deg, #333333, #2a2a2a);
-    }
-
-    .key.shift-key::before {
-      content: '↑';
-      margin-right: 8px;
-      color: #00ff9d;
-    }
-
-    .key.enter-key {
-      min-width: 120px;
-      background: linear-gradient(145deg, #00ff9d, #00cc7a);
-      color: #000000;
-      font-weight: 700;
-    }
-
-    /* ===== NAVIGATION ===== */
+    /* Navigation */
     nav {
       position: absolute;
-      top: 0;
+      top: 30px;
       left: 0;
       right: 0;
-      z-index: 1000;
-      padding: 30px 0;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: flex-end;
+      z-index: 100;
     }
 
     .nav-links {
       display: flex;
+      justify-content: center;
       gap: 40px;
       list-style: none;
     }
@@ -388,169 +141,181 @@
     .nav-link {
       color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
+      font-weight: 500;
       padding: 10px 20px;
       border-radius: 25px;
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav-link::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(0, 255, 157, 0.3),
-        transparent
-      );
-      transition: left 0.5s;
-    }
-
-    .nav-link:hover::before {
-      left: 100%;
     }
 
     .nav-link:hover {
-      background: rgba(0, 255, 157, 0.1);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 255, 157, 0.2);
+      background: rgba(255, 255, 255, 0.1);
     }
 
-    /* ===== STATUS INDICATOR ===== */
-    .status-indicator {
+    /* ===== ABOUT SECTION ===== */
+    #about {
+      background: #f8f9fa;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* ===== SKILLS SECTION ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .skill-card h3 {
+      color: #000000;
+      margin-bottom: 15px;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .skill-list li:before {
+      content: "▸";
       position: absolute;
-      bottom: 30px;
-      right: 30px;
+      left: 0;
+      color: #00d9ff;
+    }
+
+    /* ===== PROJECTS SECTION ===== */
+    #projects {
+      background: #f8f9fa;
+    }
+
+    .projects-list {
+      max-width: 800px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .project-item {
+      background: #ffffff;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid #00d9ff;
+      transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateX(10px);
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .contact-item {
+      text-align: center;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+      color: #00d9ff;
+      margin-bottom: 15px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      gap: 10px;
-      z-index: 3;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    .status-dot {
-      width: 12px;
-      height: 12px;
-      background: #00ff9d;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-      box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+    .social-link:hover {
+      background: #00d9ff;
+      transform: translateY(-5px);
     }
 
-    .status-text {
+    /* ===== FOOTER ===== */
+    footer {
+      background: #000000;
       color: #ffffff;
-      font-size: 0.9rem;
-      opacity: 0.8;
-      letter-spacing: 1px;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    /* ===== SCROLL INDICATOR ===== */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255, 255, 255, 0.6);
       text-align: center;
-      z-index: 3;
-      animation: bounce 2s infinite;
+      padding: 60px 0;
     }
 
-    .scroll-indicator i {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      display: block;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-      40% { transform: translateX(-50%) translateY(-10px); }
-      60% { transform: translateX(-50%) translateY(-5px); }
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (max-width: 1024px) {
-      .computer-interface {
-        max-width: 90%;
-        padding: 30px;
-      }
-      
-      .name-terminal {
-        font-size: 2.8rem;
-      }
-      
-      .title-line {
-        font-size: 1.1rem;
-        letter-spacing: 2px;
-      }
-      
-      .key {
-        min-width: 50px;
-        height: 50px;
-        font-size: 1rem;
-      }
-      
-      .key.shift-key {
-        min-width: 120px;
-      }
-    }
-
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      header {
-        padding-top: 80px;
+      h1 {
+        font-size: 2.5rem;
       }
       
-      .computer-interface {
-        padding: 20px;
+      h2 {
+        font-size: 2rem;
       }
       
-      .terminal-display {
-        padding: 30px 20px;
+      .name-display {
+        font-size: 3rem;
       }
       
-      .name-terminal {
-        font-size: 2.2rem;
-        display: block;
-        text-align: center;
-      }
-      
-      .professional-title {
-        padding: 20px;
-      }
-      
-      .title-line {
-        font-size: 1rem;
-        letter-spacing: 1px;
-      }
-      
-      .key-row {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .key {
-        min-width: 40px;
-        height: 40px;
-        font-size: 0.9rem;
-        margin: 3px;
-      }
-      
-      .key.shift-key {
-        min-width: 100px;
+      .subtitle {
+        font-size: 1.2rem;
       }
       
       .nav-links {
@@ -561,39 +326,62 @@
         padding: 8px 16px;
         font-size: 0.9rem;
       }
-    }
-
-    @media (max-width: 480px) {
-      .name-terminal {
-        font-size: 1.8rem;
-      }
       
-      .title-line {
+      .key {
+        width: 40px;
+        height: 40px;
         font-size: 0.9rem;
       }
       
-      .keyboard-visual {
-        padding: 20px 15px;
+      .key.shift {
+        width: 80px;
       }
       
-      .key {
-        min-width: 35px;
-        height: 35px;
-        font-size: 0.8rem;
+      .section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .name-display {
+        font-size: 2.2rem;
       }
       
       .nav-links {
         flex-direction: column;
-        gap: 10px;
         align-items: center;
+        gap: 10px;
+      }
+      
+      .keyboard-minimal {
+        padding: 20px;
+      }
+      
+      .key-row {
+        flex-wrap: wrap;
+      }
+      
+      .key {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+      }
+      
+      .key.shift {
+        width: 70px;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <nav>
-      <div class="nav-container">
+      <div class="container">
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -603,167 +391,218 @@
       </div>
     </nav>
 
-    <div class="header-content">
-      <div class="container">
-        <!-- Modern Computer Interface -->
-        <div class="computer-interface">
-          <div class="terminal-display">
-            <!-- Terminal-style Name Display -->
-            <div class="name-terminal">NTOKOZO MABOA</div>
-            
-            <!-- Command Line -->
-            <div class="command-line">user@portfolio:~$ cat bio.txt</div>
-            
-            <!-- Professional Title -->
-            <div class="professional-title">
-              <div class="title-line">SOFTWARE DEVELOPER</div>
-              <div class="title-line">DATA ANALYST</div>
-              <div class="title-line">SYSTEMS DEVELOPMENT GRADUATE</div>
-            </div>
-            
-            <!-- Visual Keyboard -->
-            <div class="keyboard-visual">
-              <!-- Top Row -->
-              <div class="key-row">
-                <div class="key" data-key="Q">Q</div>
-                <div class="key" data-key="W">W</div>
-                <div class="key" data-key="E">E</div>
-                <div class="key" data-key="R">R</div>
-                <div class="key" data-key="T">T</div>
-                <div class="key" data-key="Y">Y</div>
-                <div class="key" data-key="U">U</div>
-                <div class="key" data-key="I">I</div>
-                <div class="key" data-key="O">O</div>
-                <div class="key" data-key="P">P</div>
-              </div>
-              
-              <!-- Middle Row -->
-              <div class="key-row">
-                <div class="key" data-key="A">A</div>
-                <div class="key" data-key="S">S</div>
-                <div class="key" data-key="D">D</div>
-                <div class="key" data-key="F">F</div>
-                <div class="key" data-key="G">G</div>
-                <div class="key" data-key="H">H</div>
-                <div class="key" data-key="J">J</div>
-                <div class="key" data-key="K">K</div>
-                <div class="key" data-key="L">L</div>
-              </div>
-              
-              <!-- Bottom Row -->
-              <div class="key-row">
-                <div class="key shift-key" data-key="Shift">Shift</div>
-                <div class="key" data-key="Z">Z</div>
-                <div class="key" data-key="X">X</div>
-                <div class="key" data-key="C">C</div>
-                <div class="key" data-key="V">V</div>
-                <div class="key" data-key="B">B</div>
-                <div class="key" data-key="N">N</div>
-                <div class="key" data-key="M">M</div>
-                <div class="key enter-key" data-key="Enter">Enter</div>
-              </div>
-            </div>
-          </div>
+    <div class="header-content container">
+      <h1 class="name-display">NTOKOZO <span>MABOA</span></h1>
+      <p class="subtitle">Software Developer • Data Analyst • Systems Development Graduate</p>
+      
+      <div class="keyboard-minimal">
+        <div class="key-row">
+          <div class="key">N</div>
+          <div class="key">T</div>
+          <div class="key">O</div>
+          <div class="key">K</div>
+          <div class="key">O</div>
+          <div class="key">Z</div>
+          <div class="key">O</div>
         </div>
-        
-        <!-- Status Indicator -->
-        <div class="status-indicator">
-          <div class="status-dot"></div>
-          <div class="status-text">AVAILABLE</div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-          Scroll to explore
-          <i class="fas fa-chevron-down"></i>
+        <div class="key-row">
+          <div class="key">M</div>
+          <div class="key">A</div>
+          <div class="key">B</div>
+          <div class="key">O</div>
+          <div class="key">A</div>
+          <div class="key shift">SHIFT</div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Rest of the portfolio sections would go here -->
-  <section id="about" style="height: 100vh; background: #f5f5f5; padding: 100px 20px;">
+  <!-- About Section -->
+  <section id="about" class="section">
     <div class="container">
-      <h2>About Section</h2>
-      <p>Content goes here...</p>
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm <strong>Ntokozo Maboa</strong>, a Systems Development Graduate with a strong passion for software engineering and data analytics. I enjoy designing and building reliable, efficient systems that solve real-world problems.</p>
+          
+          <p>From database-driven applications to full-stack web solutions, I have a deep interest in how systems work behind the scenes, how data is structured and managed, and how meaningful insights can be extracted to support better decision-making.</p>
+          
+          <p>I'm driven by problem-solving, continuous learning, and the challenge of turning ideas into scalable, user-friendly software. Whether working independently or as part of a team, I take pride in writing clean code, applying structured design principles, and delivering solutions that are both functional and impactful.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <script>
-    // Keyboard Interaction
-    document.addEventListener('DOMContentLoaded', function() {
-      const keys = document.querySelectorAll('.key');
-      const nameTerminal = document.querySelector('.name-terminal');
-      const originalName = 'NTOKOZO MABOA';
-      
-      // Typewriter effect for the name
-      let nameIndex = 0;
-      function typeWriter() {
-        if (nameIndex < originalName.length) {
-          nameTerminal.textContent = '> ' + originalName.substring(0, nameIndex + 1);
-          nameIndex++;
-          setTimeout(typeWriter, 100);
-        }
-      }
-      
-      // Start typewriter effect
-      setTimeout(typeWriter, 1000);
-      
-      // Keyboard key interaction
-      keys.forEach(key => {
-        key.addEventListener('click', function() {
-          const keyValue = this.getAttribute('data-key');
-          
-          // Add active class for animation
-          this.classList.add('active');
-          setTimeout(() => {
-            this.classList.remove('active');
-          }, 300);
-          
-          // Special key interactions
-          if (keyValue === 'Shift') {
-            nameTerminal.textContent = '> ' + originalName.toLowerCase();
-            setTimeout(() => {
-              nameTerminal.textContent = '> ' + originalName;
-            }, 500);
-          } else if (keyValue === 'Enter') {
-            nameTerminal.style.color = '#ff6b6b';
-            setTimeout(() => {
-              nameTerminal.style.color = '#00ff9d';
-            }, 300);
-          }
-        });
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Programming</h3>
+          <ul class="skill-list">
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
         
-        // Random subtle animations for visual interest
-        const randomDelay = Math.random() * 5;
-        setTimeout(() => {
-          this.style.animationDelay = `${randomDelay}s`;
-        }, 100);
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <ul class="skill-list">
+            <li>HTML & CSS</li>
+            <li>PHP</li>
+            <li>Frontend Development</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Tools & Databases</h3>
+          <ul class="skill-list">
+            <li>MySQL & SQL Server</li>
+            <li>Git & GitHub</li>
+            <li>Visual Studio</li>
+            <li>NetBeans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>What I Work On</h2>
+      <ul class="projects-list">
+        <li class="project-item">
+          Designing and developing software applications using Java and Python, with a focus on clean, maintainable, and efficient code
+        </li>
+        <li class="project-item">
+          Building full-stack, database-driven systems that combine intuitive user interfaces with secure backend logic
+        </li>
+        <li class="project-item">
+          Creating practical and innovative solutions that address real-world challenges through structured system analysis and design
+        </li>
+        <li class="project-item">
+          Working with relational databases to model data, write optimized SQL queries, and ensure data integrity
+        </li>
+        <li class="project-item">
+          Continuously improving technical skills by exploring new technologies, refining existing solutions, and applying industry best practices
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>ntokozomaboa0209@gmail.com</p>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Phone</h3>
+          <p>067 403 1185</p>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Location</h3>
+          <p>South Africa</p>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ntokozo-maboa-a73a88353" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/ntokozo.maboa" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@ntokozo.maboa6" target="_blank" class="social-link">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p style="font-size: 1.2rem; margin-bottom: 20px;">⭐ Thank you for visiting my portfolio! 🚀</p>
+      <p>© 2025 Ntokozo Maboa | Software Developer & Data Analyst</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple hover effect for keys
+    document.querySelectorAll('.key').forEach(key => {
+      key.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.boxShadow = '0 5px 15px rgba(0, 217, 255, 0.3)';
       });
       
-      const commandLine = document.querySelector('.command-line');
-      const originalCommand = 'user@portfolio:~$ cat bio.txt';
-      commandLine.textContent = '';
-      
-      let cmdIndex = 0;
-      function typeCommand() {
-        if (cmdIndex < originalCommand.length) {
-          commandLine.textContent = originalCommand.substring(0, cmdIndex + 1);
-          cmdIndex++;
-          setTimeout(typeCommand, 50);
+      key.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = 'none';
+      });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
         }
-      }
-      
-      // Start command typing after name is done
-      setTimeout(typeCommand, 1500);
+      });
     });
+
+    // Simple typing effect for name (optional)
+    const nameElement = document.querySelector('.name-display');
+    const originalText = nameElement.textContent;
+    nameElement.textContent = '';
     
-    // Parallax effect on scroll
-    window.addEventListener('scroll', function() {
-      const scrolled = window.pageYOffset;
-      const header = document.querySelector('header');
-      header.style.transform = `translateY(${scrolled * 0.5}px)`;
-    });
+    let charIndex = 0;
+    function typeName() {
+      if (charIndex < originalText.length) {
+        nameElement.textContent += originalText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeName, 50);
+      }
+    }
+    
+    // Start typing after a short delay
+    setTimeout(typeName, 500);
   </script>
 </body>
 </html>
