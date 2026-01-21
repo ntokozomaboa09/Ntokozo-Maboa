@@ -220,29 +220,90 @@
       color: #00d9ff;
     }
 
-    /* ===== PROJECTS SECTION ===== */
-    #projects {
+    /* ===== UPDATED MY APPROACH SECTION ===== */
+    #approach {
       background: #f8f9fa;
     }
 
-    .projects-list {
-      max-width: 800px;
+    .approach-container {
+      max-width: 900px;
       margin: 0 auto;
-      list-style: none;
     }
 
-    .project-item {
+    .approach-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .approach-card {
       background: #ffffff;
-      padding: 30px;
-      margin-bottom: 20px;
+      padding: 35px;
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
       border-left: 5px solid #00d9ff;
-      transition: transform 0.3s ease;
     }
 
-    .project-item:hover {
-      transform: translateX(10px);
+    .approach-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .approach-icon {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #00d9ff;
+    }
+
+    .approach-card h3 {
+      font-size: 1.6rem;
+      color: #000000;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .approach-card p {
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* Tech Stack */
+    .tech-stack {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    .tech-stack h3 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #000000;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .tech-tag {
+      background: #000000;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+      background: #00d9ff;
+      transform: translateY(-3px);
     }
 
     /* ===== CONTACT SECTION ===== */
@@ -340,6 +401,14 @@
       .section {
         padding: 60px 0;
       }
+      
+      .approach-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      .approach-card {
+        padding: 25px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -374,6 +443,15 @@
       .key.shift {
         width: 70px;
       }
+      
+      .tech-tags {
+        gap: 10px;
+      }
+      
+      .tech-tag {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -385,7 +463,7 @@
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#approach" class="nav-link">My Approach</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -480,27 +558,75 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
+  <!-- My Approach Section (Updated from "What I Work On") -->
+  <section id="approach" class="section">
     <div class="container">
-      <h2>What I Work On</h2>
-      <ul class="projects-list">
-        <li class="project-item">
-          Designing and developing software applications using Java and Python, with a focus on clean, maintainable, and efficient code
-        </li>
-        <li class="project-item">
-          Building full-stack, database-driven systems that combine intuitive user interfaces with secure backend logic
-        </li>
-        <li class="project-item">
-          Creating practical and innovative solutions that address real-world challenges through structured system analysis and design
-        </li>
-        <li class="project-item">
-          Working with relational databases to model data, write optimized SQL queries, and ensure data integrity
-        </li>
-        <li class="project-item">
-          Continuously improving technical skills by exploring new technologies, refining existing solutions, and applying industry best practices
-        </li>
-      </ul>
+      <h2>My Approach</h2>
+      <div class="approach-container">
+        <div class="approach-cards">
+          <!-- Architect & Developer -->
+          <div class="approach-card">
+            <div class="approach-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3>Architect & Developer</h3>
+            <p>I build full-stack applications with Java and Python. My focus is on clean, efficient, and scalable code that forms reliable digital foundations.</p>
+          </div>
+          
+          <!-- Data-Informed Engineer -->
+          <div class="approach-card">
+            <div class="approach-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Data-Informed Engineer</h3>
+            <p>I integrate data analysis directly into the development lifecycle. This ensures every feature is guided by real user behavior and system metrics.</p>
+          </div>
+          
+          <!-- System & Database Designer -->
+          <div class="approach-card">
+            <div class="approach-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>System & Database Designer</h3>
+            <p>I design intuitive systems paired with robust relational databases. I write optimized SQL and ensure strict data integrity and security.</p>
+          </div>
+          
+          <!-- Problem Solver -->
+          <div class="approach-card">
+            <div class="approach-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Problem Solver</h3>
+            <p>I transform complex challenges into practical software solutions. My process uses structured analysis for innovative, user-centric results.</p>
+          </div>
+          
+          <!-- Continuous Learner -->
+          <div class="approach-card">
+            <div class="approach-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Continuous Learner</h3>
+            <p>I stay ahead by exploring new technologies and refining best practices. My goal is to build systems that are both modern and enduring.</p>
+          </div>
+        </div>
+        
+        <div class="tech-stack">
+          <h3>Technologies I Work With</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">System Design</span>
+            <span class="tech-tag">Data Analysis</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -603,6 +729,29 @@
     
     // Start typing after a short delay
     setTimeout(typeName, 500);
+    
+    // Add subtle animation to approach cards on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Apply to approach cards
+    document.querySelectorAll('.approach-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
   </script>
 </body>
 </html>
