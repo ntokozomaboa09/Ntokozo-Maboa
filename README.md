@@ -16,8 +16,7 @@
 
 ## 👋 Welcome
 
-I’m **Ntokozo Maboa**, a **Systems Development Graduate** with a strong passion for **software engineering and data analytics**.  
-I enjoy building **reliable software systems**, working with **structured data**, and transforming information into **meaningful insights** that support better decision-making.
+I’m Ntokozo Maboa, a Systems Development Graduate with a strong passion for software engineering and data analytics. I enjoy designing and building reliable, efficient systems that solve real-world problems, from database-driven applications to full-stack web solutions. I have a deep interest in how systems work behind the scenes, how data is structured and managed, and how meaningful insights can be extracted to support better decision-making. I’m driven by problem-solving, continuous learning, and the challenge of turning ideas into scalable, user-friendly software. Whether working independently or as part of a team, I take pride in writing clean code, applying structured design principles, and delivering solutions that are both functional and impactful.
 
 I am actively seeking **graduate or entry-level opportunities** where I can grow professionally, contribute to impactful projects, and continuously sharpen my technical skills.
 
