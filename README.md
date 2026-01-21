@@ -1,75 +1,107 @@
-# Hi, I’m Ntokozo Maboa 
+<div align="center">
 
-🎓 **Systems Development Graduate** | 💻 **Aspiring Software Engineer & Data Analyst** | 🇿🇦 **South Africa**
+# Ntokozo Maboa  
+### Software Developer • Data Analyst • Systems Graduate  
 
----
+📍 South Africa  
+📧 **ntokozomaboa0209@gmail.com**  
 
-## 👨‍💻 About Me
+[Instagram](https://www.instagram.com/ntokozo.maboa?igsh=ajlxcnRkdWUwMGE1&utm_source=qr) • 
+[TikTok](https://www.tiktok.com/@ntokozo.maboa6?_r=1&_t=ZS-93GBzPHmSl5) • 
+[LinkedIn](https://www.linkedin.com/in/ntokozo-maboa-a73a88353)
 
-I am a dedicated and motivated **Systems Development graduate** with a **Diploma in Systems Development from Boston City Campus**. I have a strong interest in building efficient, reliable software solutions and working with data to solve real-world problems.
-
-I enjoy learning new technologies, improving my problem-solving skills, and collaborating with others to deliver high-quality solutions. My academic journey has equipped me with a solid foundation in software development principles, database systems, and systems analysis.
-
-I am currently seeking **graduate or entry-level opportunities** in:
-
-- Software Engineering  
-- Systems Development  
-- Data Analytics  
+</div>
 
 ---
 
-## 🔧 Technical Skills
+## 👋 Welcome
 
-### 🖥️ Programming Languages
-- Java  
-- Python  
-- JavaScript  
-- SQL  
+I’m **Ntokozo Maboa**, a **Systems Development Graduate** with a strong passion for **software engineering and data analytics**.  
+I enjoy building **reliable applications**, working with **databases**, and turning **data into insights**.
 
-### 🌐 Web Development
-- HTML  
-- CSS  
-- PHP  
+I’m actively seeking **graduate or entry-level opportunities** where I can grow, learn, and contribute to impactful projects.
 
-### 🗄️ Databases & Data
-- MySQL  
-- SQL Server  
-- Database design, queries & normalization  
-- Basic data analysis using SQL  
+---
 
-### ⚙️ Software Development
-- Software Development Life Cycle (SDLC)  
-- System testing & debugging  
-- Systems analysis (DFDs, use cases, flowcharts)  
+## 🧠 About Me
+
+I hold a **Diploma in Systems Development from Boston City Campus**.  
+My academic background has equipped me with skills in:
+
+- Software development  
+- Database systems  
+- Systems analysis  
 - Technical documentation  
 
-### 🛠️ Tools & Practices
-- Visual Studio  
-- Eclipse  
-- Git & GitHub  
-- Agile methodologies  
-- Trello  
+I enjoy problem-solving, writing clean code, and collaborating with teams to deliver quality solutions.
 
 ---
 
-## 🚀 What You’ll Find Here
+## 🛠️ Skills & Technologies
 
-- 📚 Academic and personal projects  
-- ☕ Java and 🐍 Python applications  
-- 🌐 Web-based and database-driven systems  
-- 📈 Continuous learning and skill development  
+### 💻 Programming  
+`Java` • `Python` • `JavaScript` • `SQL`  
+
+### 🌐 Web  
+`HTML` • `CSS` • `PHP`  
+
+### 🗄️ Databases  
+`MySQL` • `SQL Server`  
+
+### ⚙️ Software Development  
+- SDLC  
+- Debugging & Testing  
+- Systems Analysis (DFDs, Use Cases, Flowcharts)  
+- Technical Documentation  
+
+### 🧰 Tools  
+`Git` • `GitHub` • `Visual Studio` • `Eclipse` • `Trello`  
+
+---
+
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=ntokozomaboa09&show_icons=true&theme=tokyonight" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ntokozomaboa09&theme=tokyonight" width="48%" />
+</p>
+
+---
+
+## 🚀 What I Work On
+
+- Java & Python applications  
+- Web-based systems  
+- Database-driven solutions  
+- Academic & personal projects  
+- Continuous learning & improvements  
 
 ---
 
 ## 🌱 Currently Learning
-- Advanced Java & Python concepts  
-- Data analytics and reporting  
-- Improving software design and clean code practices  
+
+- Advanced Java & Python  
+- Data analytics & reporting  
+- Clean code & software design  
 
 ---
 
-## 🤝 Let’s Connect
+## 📬 Contact Me
 
-I’m always open to learning opportunities, collaboration, and entry-level roles where I can grow and contribute to meaningful projects.
+If you’re looking for a **motivated junior developer or data analyst**, I’d love to connect.
 
-📌 *Feel free to explore my repositories and follow my learning journey!*
+📍 South Africa  
+📧 **ntokozomaboa0209@gmail.com**  
+
+🔗 [LinkedIn](https://www.linkedin.com/in/ntokozo-maboa-a73a88353)  
+📸 [Instagram](https://www.instagram.com/ntokozo.maboa?igsh=ajlxcnRkdWUwMGE1&utm_source=qr)  
+🎵 [TikTok](https://www.tiktok.com/@ntokozo.maboa6?_r=1&_t=ZS-93GBzPHmSl5)  
+
+---
+
+<div align="center">
+
+⭐ **Thank you for visiting my GitHub portfolio!**  
+Feel free to explore my projects and follow my journey 🚀  
+
+</div>
