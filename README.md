@@ -11,7 +11,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ntokozo-maboa-a73a88353)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ntokozo.maboa?igsh=ajlxcnRkdWUwMGE1&utm_source=qr)
 [![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@ntokozo.maboa6?_r=1&_t=ZS-93GBzPHmSl5)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-github-username) <!-- Replace with your GitHub URL -->
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ntokozomaboa09)
 
 </div>
 
@@ -49,21 +49,24 @@ I am eager to launch my career as a **Junior Full Stack Developer**, bringing a 
 
 ## 🚀 Featured Projects
 
-Here are a few examples of my full-stack development work. *[Consider adding screenshots or GIFs to these for a more dynamic portfolio.]*
+Here are a few examples of my full-stack development work from my GitHub portfolio:
 
-### **1. [Project Name: e.g., "Inventory Management System"]** 
-- **Description:** A full-stack web application for tracking stock levels, managing suppliers, and generating sales reports.
-- **My Role:** Designed the database schema, developed the back-end logic with Java, and built a responsive user interface.
-- **Tech Stack:** Java, JSP, MySQL, HTML/CSS, JavaScript.
-- **Key Achievement:** Implemented a real-time low-stock alert feature, reducing manual inventory checks.
+### **1. Smart Retail System**
+- **Description:** A full-stack e-commerce system with a PHP/MySQL backend and an HTML/CSS/JS frontend. It features user authentication, a product catalog, a shopping cart, a checkout system, and an admin dashboard for managing products and orders.
+- **Tech Stack:** PHP, MySQL, HTML, CSS, JavaScript
+- **Repository:** [Smart-Retail-System](https://github.com/ntokozomaboa09/Smart-Retail-System)
 
-### **2. [Project Name: e.g., "TaskFlow - A Collaborative To-Do List"]**
-- **Description:** A multi-user web application where teams can create projects, assign tasks, and track progress.
-- **My Role:** Developed user authentication, the task management API, and the interactive dashboard front-end.
-- **Tech Stack:** Python (Flask), SQLite, HTML/CSS, JavaScript.
-- **Key Achievement:** Integrated a tagging and filtering system for efficient task organization.
+### **2. Registration and Academic Management System**
+- **Description:** A student management system that allows administrators to perform full CRUD operations on student records stored in a MySQL database. It includes a dashboard for efficient data management.
+- **Tech Stack:** PHP, MySQL
+- **Repository:** [Registration-and-Academic-Management-System](https://github.com/ntokozomaboa09/Registration-and-Academic-Management-System)
 
-*(You can find the code for these and other projects in my [GitHub repositories](https://github.com/your-github-username).)* <!-- Add your link here -->
+### **3. Vitalize - Gym Management App**
+- **Description:** A PHP application for managing a gymnastics gym. It allows admins to add/delete programs, enrol gymnasts, and track attendance and progress using JSON for data storage.
+- **Tech Stack:** PHP, JSON, HTML, CSS
+- **Repository:** [Vitalize](https://github.com/ntokozomaboa09/Vitalize)
+
+*(You can find the code for these and other projects in my [GitHub repositories](https://github.com/ntokozomaboa09).)*
 
 ---
 
